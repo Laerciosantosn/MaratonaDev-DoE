@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="logo.css">
-  <link rel ="shortcut icon" href ="favicon.ico"/>
+  <link rel="stylesheet" href="/logo.css">
+  <link rel ="shortcut icon" href ="/favicon.ico"/>
   <title>Doe Sangue! Doe vida!</title>
 </head>
 
@@ -33,7 +33,7 @@
 
   <section class="form hide">
     <h2>Entre na lista de doadores</h2>
-    <form action="/">
+    <form action="/" method="POST">
       <input type="text" name="name" placeholder="Nome Completo">
       <input type="text" name="email" placeholder="Email">
       <input type="text" name="blood" placeholder="blood">
@@ -44,29 +44,21 @@
   <main>
     <h2>Últimos <span>doadores</span></h2>
     <section class="donors">
-      <div class="donor">
-        <div class="blood">A+</div>
-        <p>Diego Fernandes</p>
-      </div>
-      <div class="donor">
-        <div class="blood">B+</div>
-        <p>Diego Fernandes</p>
-      </div>
-      <div class="donor">
-        <div class="blood">O+</div>
-        <p>Diego Fernandes</p>
-      </div>
-      <div class="donor">
-        <div class="blood">AB+</div>
-        <p>Diego Fernandes</p>
-      </div>
+
+      {% for donor in donors %}
+        <div class="donor">
+          <div class="blood">{{donor.blood}}</div>
+          <p>{{donor.name}}</p>
+        </div>
+      {% endfor %}
+
     </section>
 
   </main>
 
   <footer>Com ❤️ Rocketseat</footer>
 
-   <script src="scripts.js"></script> 
+   <script src="/scripts.js"></script> 
 </body>
 
 </html>
