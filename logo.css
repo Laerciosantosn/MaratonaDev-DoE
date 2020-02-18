@@ -1,0 +1,113 @@
+/* HTML */
+/* <div class="container">
+  D
+  <div class="blood">
+      <div id="cruz" class="shape"></div>
+  </div>
+  E
+</div> */
+
+
+/* GOTA DE SANGUE COM CRUZ */
+.container {
+  display: grid;
+  grid-template-columns: 50px  50px 50px;
+  position: relative;
+  font-size: 50px;
+  width: 150px;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+  text-align:center;
+  padding-top: 10px;
+  
+}
+
+.gota {
+  width: 50px;
+  height: 50px;
+  background-color: #ff4f4f;
+  border-radius: 50%;
+  border-top-right-radius: 0;
+  transform: rotate(-45deg);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 4px -1px rgba(0, 0, 0, 0.35);
+
+}
+.gota:hover{
+  width: 55px;
+  height: 55px;
+}
+
+/* ADD A CRUZ NA GOTA DE SANGUE */
+
+/* #cruz {
+  background: #ffffff;
+  height: 40px;
+  width: 10px;
+  position:relative;
+  transform: rotate(-45deg);
+  border-radius: 20px;
+}
+#cruz::after {
+  content: "";
+  background: #ffff;
+  height: 10px;
+  width: 40px;
+  left: -15px;
+  top: 15px;
+  border-radius: 20px;
+  position: absolute;
+} */
+
+/* ADD O CARACAO NA GOTA DE SANGUE */
+
+/* SUBISTITUIR NO HTML O id="cruz" POR id="caracao" */
+
+#coracao {
+  position: realtive;
+  width:30px;
+  height: 25px;
+  background: transparente;
+  transform: rotate(45deg);
+}
+
+#coracao::before,
+#coracao::after {
+  position: absolute;
+    content: "";
+    left: 15px;
+    width: 15px;
+    top: 4px;
+    height: 25px;
+    background: #ffffff;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+#coracao::after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+}
+
